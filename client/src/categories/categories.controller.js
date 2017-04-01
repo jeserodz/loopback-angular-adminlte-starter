@@ -1,5 +1,5 @@
 export default class CategoriesCtrl {
-  constructor() {
+  constructor(User) {
     'ngInject';
   }
 }

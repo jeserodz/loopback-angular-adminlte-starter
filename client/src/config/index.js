@@ -3,6 +3,12 @@ import lodash from 'lodash';
 
 const configModule = angular.module('app.config', []);
 
+import apiConfig from './api.config';
+configModule.config(apiConfig);
+
+import authConfig from './auth.config';
+configModule.config(authConfig);
+
 import routerConfig from './router.config';
 configModule.config(routerConfig);
 

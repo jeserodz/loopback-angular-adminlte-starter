@@ -11,6 +11,7 @@ import 'admin-lte';
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 import ngResource from 'angular-resource';
+import './api';
 import './config';
 import './components';
 import './login';
@@ -20,18 +21,13 @@ import './categories';
 // YOUR APP CODE STARTS HERE
 const app = angular.module('app', [
   uiRouter, 
-  ngResource, 
+  ngResource,
+  'app.api',
   'app.config',
   'app.components',
   'app.login',
   'app.dashboard',
   'app.categories'
 ]);
-
-app.controller('RootCtrl', function($state) {
-  this.isLoginPage = function() {
-    return $state.current.name === 'app.login';
-  };
-})
 
 angular.bootstrap(document.querySelector('html'), ['app']);

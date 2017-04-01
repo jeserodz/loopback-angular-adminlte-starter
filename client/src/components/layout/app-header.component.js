@@ -1,8 +1,14 @@
 import html from './app-header.component.html';
 
 class AppHeaderCtrl {
-  constructor() {
+  constructor($state, User) {
     'ngInject';
+    Object.assign(this, { $state, User });
+  }
+
+  logout() {
+    this.User.logout().$promise
+      .then(() => this.$state.go('app.login'));
   }
 }
 
