@@ -1,7 +1,13 @@
 export default class MainController {
-  constructor() {
-    'ngInject';
+  constructor($state) {
+    Object.assign(this, {$state});
 
-    this.test = 'testing testing 123';
+    this.app = {
+      title: 'Ingsecom Computadoras'
+    };
+  }
+
+  isLoginPage() {
+    return this.$state.current.name === 'app.login';
   }
 }

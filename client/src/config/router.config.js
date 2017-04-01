@@ -1,8 +1,10 @@
 export default function routerConfig($stateProvider, $urlRouterProvider) {
+
+  // abstract root route
+  // doesn't need controller
   $stateProvider.state('app', {
     url: '',
     abstract: true,
-    controller: 'MainController as $ctrl',
     template: '<ui-view></ui-view>'
   });
 
