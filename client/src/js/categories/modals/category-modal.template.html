@@ -1,0 +1,29 @@
+<div class="modal-content">
+  <div class="modal-header">
+    <button type="button" class="close" ng-click="$ctrl.$uibModalInstance.close()">
+      <span aria-hidden="true">×</span></button>
+    <h4 class="modal-title" ng-bind="$ctrl.editCategory.id ? 'Editar Categoría' : 'Crear Categoria'"></h4>
+  </div>
+  <div class="modal-body">
+    <div class="form-group">
+      <label>Nombre de la categoría</label>
+      <input type="text" 
+        class="form-control"
+        placeholder="Introduzca el nombre de la categoría"
+        ng-model="$ctrl.editCategory.name">
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" 
+      class="btn btn-default pull-left"
+      ng-click="$ctrl.$uibModalInstance.close()">
+      Cerrar
+    </button>
+    <button type="button"
+      class="btn btn-primary"
+      ng-click="$ctrl.save()"
+      ng-disabled="$ctrl.newCategory.name.length == 0"
+      ng-bind="$ctrl.editCategory.id ? 'Guardar' : 'Crear'">
+    </button>
+  </div>
+</div>

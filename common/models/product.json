@@ -3,6 +3,7 @@
   "plural": "products",
   "base": "PersistedModel",
   "idInjection": true,
+  "forceId": false,
   "options": {
     "validateUpsert": true
   },

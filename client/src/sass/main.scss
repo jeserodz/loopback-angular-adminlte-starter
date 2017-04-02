@@ -1,0 +1,7 @@
+.editable-row {
+  .btn-group { visibility: hidden; }
+
+  &:hover {
+    .btn-group { visibility: visible; }
+  }
+}
